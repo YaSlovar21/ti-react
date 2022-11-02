@@ -1,0 +1,13 @@
+.catalog-section {
+  background-color: #2F2F2F;
+  padding: 49px 0;
+  display: flex;
+  
+}
+
+.catalog-section__grid {
+  display:grid; 
+  grid-template-columns: repeat(4, 305px); 
+  padding: 40px 0; 
+  gap:10px;
+}

@@ -1,0 +1,12 @@
+.header__title {
+  margin: 0;
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: var(--burton-title-fontsize);
+  line-height: 1.4;
+
+  color: var(--theme-text-color);
+
+  max-width: 827px;
+}

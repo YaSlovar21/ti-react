@@ -1,0 +1,5 @@
+.bem__title {
+  font-size: var(--section-subtitle-fontsize);
+  color: var(--theme-text-color);
+  margin: 0 0 10px;
+}

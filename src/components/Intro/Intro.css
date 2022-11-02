@@ -1,0 +1,4 @@
+@import url(../../blocks/mainpage-about/mainpage-about.css);
+@import url(../../blocks/mainpage-about/__grid/mainpage-about__grid.css);
+@import url(../../blocks/mainpage-about/__grid-item/mainpage-about__grid-item.css);
+@import url(../../blocks/mainpage-about/__action-link/mainpage-about__action-link.css);

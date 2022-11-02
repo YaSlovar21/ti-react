@@ -1,0 +1,16 @@
+/**/
+@import url(../../blocks/catalog-section/catalog-section.css);
+@import url(../../blocks/catalog-section/__aside/catalog-section__aside.css);
+@import url(../../blocks/catalog-section/__intro/catalog-section__intro.css);
+@import url(../../blocks/catalog-section/__action-link/catalog-section__action-link.css);
+
+@import url(../../blocks/catalog-section/__content/catalog-section__content.css);
+@import url(../../blocks/catalog-section/__content/_type_unit/catalog-section__content_type_unit.css);
+
+@import url(../../blocks/catalog-section/_type_unit/catalog-section_type_unit.css);
+@import url(../../blocks/catalog-section/__units-navlist/catalog-section__units-navlist.css);
+@import url(../../blocks/catalog-section/__units-navlist-item/catalog-section__units-navlist-item.css);
+@import url(../../blocks/catalog-section/__units-navlist-item/_checked/catalog-section__units-navlist-item_checked.css);
+
+
+
