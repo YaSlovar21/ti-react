@@ -1,0 +1,24 @@
+.cart__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+
+    
+}
+
+.cart__title_init {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.cart__title_init::before {
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 1em;
+    background-image: url(../../../images/ti/svg-elems/add-to-cart-black.svg);
+    background-size: contain;
+    background-position: center;
+}

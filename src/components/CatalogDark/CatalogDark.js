@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import FormSearch from "../FormSearch/FormSearch";
 import Card from "../Card/Card";
+import CartDesc from "../CartDesc/CartDesc";
 
 import './CatalogDark.css';
 import plateTest from '../../images/ti/plasttest.png';
@@ -113,6 +114,7 @@ function CatalogDark(changecartfunction) {
             }
           </div>
         </div>
+        <CartDesc/>
       </section>
         
     );

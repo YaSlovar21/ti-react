@@ -11,22 +11,22 @@ function FormSearch(props) {
       }
 
     return (
-        <form class="form-search">
-            <div class="form-search__line">
+        <form className="form-search">
+            <div className="form-search__line">
                 <input
-                    class="form-search__input"
+                    className="form-search__input"
                     placeholder="Введите наименование для поиска"
                     name="request"
                 />
-                <button class="form-search__button" type="submit">Поиск</button>
+                <button className="form-search__button" type="submit">Поиск</button>
             </div>
-            <span class="form-search__hint">Ничего не введено</span>
-            <div class="form-search__filter">
-                <input class="form-search__checkbox" id="filter" checked={isShortChecked} type="checkbox"/>
-                <button class="form-search__filterbutton" type="button" onClick={handleClick}>
-                    <div class="form-search__tumblr"></div>
+            <span className="form-search__hint">Ничего не введено</span>
+            <div className="form-search__filter">
+                <input className="form-search__checkbox" id="filter" checked={isShortChecked} type="checkbox"/>
+                <button className="form-search__filterbutton" type="button" onClick={handleClick}>
+                    <div className="form-search__tumblr"></div>
                 </button>
-                <label class="form-search__label" for="filter">В наличии</label>
+                <label className="form-search__label" for="filter">В наличии</label>
             </div>
         </form>
     )

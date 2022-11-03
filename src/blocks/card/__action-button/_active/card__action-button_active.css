@@ -1,0 +1,3 @@
+.card__action-button_active {
+    background-color: var(--theme-red-color);
+}

@@ -1,6 +1,7 @@
 :root {
   --card-container-bg-color: #2f2f2f;
   --card-container-bg-light-color: #363636;
+  --card-action-button-active-bg: #ec45ea;
   --padding-inner: 16px;
 }
 

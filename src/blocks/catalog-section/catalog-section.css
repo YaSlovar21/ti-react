@@ -1,8 +1,9 @@
 .catalog-section {
   background-color: #2F2F2F;
-  padding: 49px 0;
+  padding: 49px var(--aside-width);
   display: flex;
   
+  box-sizing: border-box;
 }
 
 .catalog-section__grid {

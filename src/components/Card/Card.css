@@ -8,6 +8,7 @@
 @import url(../../blocks/card/__price/card__price.css);
 
 @import url(../../blocks/card/__action-button/card__action-button.css);
+@import url(../../blocks/card/__action-button/_active/card__action-button_active.css);
 
 @import url(../../blocks/card/__title/_cti/card__title_cti.css);
 @import url(../../blocks/card/_cti/card_cti.css);
