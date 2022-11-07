@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import './FormSearch.css';
 
+import ChoiceGroupList from "../ChoiceGroupList/ChoiceGroupList";
+
 function FormSearch(props) {
     const [isShortChecked, setIsShortChecked] = React.useState(true);
     
@@ -28,6 +30,39 @@ function FormSearch(props) {
                 </button>
                 <label className="form-search__label" for="filter">В наличии</label>
             </div>
+
+            
+            <ChoiceGroupList 
+                title="Марка стали пластин" 
+                type="checkbox" 
+                whatwechoose="steel" 
+                tags={[
+                    {value: 'aisi316', text: 'AISI316'}, 
+                    {value: 'aisi304', text: 'AISI304'}
+                ]} 
+            />
+
+            <ChoiceGroupList 
+                title="Толщина пластины" 
+                type="radio" 
+                whatwechoose="thickness" 
+                tags={[
+                    {value: '0.4', text: '0.4'}, 
+                    {value: '0.5', text: '0.5'},
+                    {value: '0.6', text: '0.6'}
+                ]} 
+            />
+
+            <ChoiceGroupList 
+                title="Материал уплотнений" 
+                type="radio" 
+                whatwechoose="rubber" 
+                tags={[
+                    {value: 'epdm', text: 'EPDM'}, 
+                    {value: 'nbr', text: 'NBR'},
+                ]} 
+            />
+            
         </form>
     )
 }

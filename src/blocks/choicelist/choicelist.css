@@ -1,0 +1,40 @@
+.choicelist {
+    padding: 0;
+    margin: 0;
+    border: none;
+    
+    display: flex;
+    align-items: center;
+
+}
+
+.choicelist__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.1;
+
+    color: var(--mainpage-ti-gray-color);
+    margin: 0;
+}
+
+.choicelist__input {
+    opacity: 0;
+    position: absolute;
+}
+
+.choicelist__span {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid var(--mainpage-ti-gray-color);
+    color: var(--mainpage-ti-gray-color);
+
+    transition: all .2s ease-in;
+}
+
+.choicelist__input:checked + .choicelist__span {
+    background-color: var(--brand-color-web);
+}
