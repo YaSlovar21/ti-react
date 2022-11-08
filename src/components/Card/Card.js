@@ -17,6 +17,7 @@ function Card(props) {
 
     function handleCartAddButtonClick() {
       setIsCardInCart(!isCardInCart);
+      props.onAddedToCart(`${props.pto}-${props.plastPorts}-${props.plastCanals}`);
     }
     
     return (

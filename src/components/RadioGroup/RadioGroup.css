@@ -1,0 +1,31 @@
+.radiogroup {
+    display: flex;
+    border: 1px solid var(--mainpage-ti-gray-color);
+    border-radius: 8px;
+    overflow: hidden;
+
+    margin-bottom: 5px;
+}
+
+.radiogroup__button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    padding: 10px 20px;
+    
+    color: var(--mainpage-ti-gray-color);
+    transition: background-color .2s ease-in;
+}
+
+.radiogroup__button_active {
+    background-color: var(--brand-color-web);
+    font-weight: 500;
+}
+
+.radiogroup__button_up {
+    border: 1px solid var(--mainpage-ti-gray-color);
+    border-radius: 8px;
+    overflow: hidden;
+}

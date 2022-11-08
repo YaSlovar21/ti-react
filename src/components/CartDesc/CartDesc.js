@@ -4,7 +4,10 @@ import './CartDesc.css';
 
 import FormPlusminus from "../FormPlusminus/FormPlusminus";
 
-function CartDesc() {
+function CartDesc(props) {
+
+    
+
     return (
         <div className="cart">
             <h2 className="cart__title cart__title_init">Здесь будет Ваша сборка</h2>
@@ -20,6 +23,7 @@ function CartDesc() {
                     <button>x</button>
                 </li>
             </ul>
+            {props.cartList}
             <button className="cart__send-button">Отправить заказ</button>
         </div>
     )

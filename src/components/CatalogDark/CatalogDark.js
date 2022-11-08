@@ -11,6 +11,13 @@ import plateTest from '../../images/ti/plasttest.png';
 
 function CatalogDark(changecartfunction) {
     
+    const [cartList, setCartList] = React.useState([]);
+
+    function handleItemAddedToCart(item) {
+      cartList.push(item);
+      console.log(cartList);
+    }
+
     const apparats = [
       { 
         pto : 'ti-025', 
@@ -89,23 +96,27 @@ function CatalogDark(changecartfunction) {
     }
   ]; 
 
-    
+  
+    React.useEffect(() => {
+      
+    }, [cartList]); 
+
     return (
       <section class="catalog-section">
         <div class="catalog-section__content">
           <FormSearch />
           <div class="catalog-section__grid">
             {
-              ['025', '077'].map((element, i) => (
+              ['025', '077', '13', '18'].map((element, i) => (
                 <>
-                  <Card type="plast" pto={element} plastPorts="0000" plastCanals="H" />
-                  <Card type="plast" pto={element} plastPorts="1004" plastCanals="H" />
-                  <Card type="plast" pto={element} plastPorts="0230" plastCanals="H" />
-                  <Card type="plast" pto={element} plastPorts="1234" plastCanals="H" />
-                  <Card type="plast" pto={element} plastPorts="0000" plastCanals="L" />
-                  <Card type="plast" pto={element} plastPorts="1004" plastCanals="L" />
-                  <Card type="plast" pto={element} plastPorts="0230" plastCanals="L" />
-                  <Card type="plast" pto={element} plastPorts="1234" plastCanals="L" />
+                  <Card type="plast" pto={element} plastPorts="0000" plastCanals="H" onAddedToCart={handleItemAddedToCart} />
+                  <Card type="plast" pto={element} plastPorts="1004" plastCanals="H" onAddedToCart={handleItemAddedToCart} />
+                  <Card type="plast" pto={element} plastPorts="0230" plastCanals="H" onAddedToCart={handleItemAddedToCart} />
+                  <Card type="plast" pto={element} plastPorts="1234" plastCanals="H" onAddedToCart={handleItemAddedToCart} />
+                  <Card type="plast" pto={element} plastPorts="0000" plastCanals="L" onAddedToCart={handleItemAddedToCart} />
+                  <Card type="plast" pto={element} plastPorts="1004" plastCanals="L" onAddedToCart={handleItemAddedToCart} />
+                  <Card type="plast" pto={element} plastPorts="0230" plastCanals="L" onAddedToCart={handleItemAddedToCart} />
+                  <Card type="plast" pto={element} plastPorts="1234" plastCanals="L" onAddedToCart={handleItemAddedToCart} />
                   <Card type="uplot" pto={element} uplotPosition="center"/>
                   <Card type="uplot" pto={element} uplotPosition="start"/>
                   <Card type="uplot" pto={element} uplotPosition="end"/>
@@ -114,7 +125,7 @@ function CatalogDark(changecartfunction) {
             }
           </div>
         </div>
-        <CartDesc/>
+        <CartDesc cartList={cartList}/>
       </section>
         
     );
