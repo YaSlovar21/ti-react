@@ -28,4 +28,5 @@
     border: 1px solid var(--mainpage-ti-gray-color);
     border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 5px;
 }

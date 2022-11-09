@@ -6,7 +6,9 @@ import FormPlusminus from "../FormPlusminus/FormPlusminus";
 
 function CartDesc(props) {
 
-    
+    React.useEffect(()=>{
+
+    },[props.cartList])
 
     return (
         <div className="cart">
@@ -23,7 +25,12 @@ function CartDesc(props) {
                     <button>x</button>
                 </li>
             </ul>
-            {props.cartList}
+            {props.cartList.map((elem, i)=> (
+                <>
+                {elem}
+                </>
+            ))}
+           
             <button className="cart__send-button">Отправить заказ</button>
         </div>
     )

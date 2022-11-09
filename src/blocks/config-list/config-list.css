@@ -1,0 +1,15 @@
+.config-list {
+
+}
+
+.config-list__item {
+    font-size: 14px;
+    color: var(--brand-color-web);
+    font-weight: 600;
+    letter-spacing: -.03em;
+    margin-right: 10px;
+}
+
+.config-list__item:last-child {
+    margin-right: 0;
+}

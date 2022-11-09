@@ -1,0 +1,10 @@
+.catalog-section__title {
+    color: var(--theme-white-color);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: -.015em;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 722px;
+}

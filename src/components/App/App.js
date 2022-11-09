@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../logo.svg';
 import Burton from '../Burton/Burton';
-import CatalogDark from '../CatalogDark/CatalogDark';
+import CatalogDark from '../CatalogDarkSection/CatalogDarkSection';
 import Intro from '../Intro/Intro';
 
 
