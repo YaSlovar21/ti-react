@@ -7,6 +7,7 @@ import CartDesc from "../CartDesc/CartDesc";
 
 import './CatalogDarkSection.css';
 import plateTest from '../../images/ti/plasttest.png';
+import CheckboxGroup from "../CheckboxGroup/CheckboxGroup";
 
 
 function CatalogDark() {
@@ -29,9 +30,25 @@ function CatalogDark() {
       }
     }
 
+    const [testCheckboxArr, setCheckboxArr] = React.useState([]);
+
+
     return (
       <section class="catalog-section">
         <div class="catalog-section__content">
+          
+          <CheckboxGroup 
+            tags={[
+                {value: 'AISI316', text: 'AISI316'}, 
+                {value: 'AISI304', text: 'AISI304'},
+                {value: 'AISI3', text: 'AISI3'}, 
+                {value: 'AISI4', text: 'AISI4'},
+            ]}  
+            selectedItems={testCheckboxArr}
+            onChangeSelected={setCheckboxArr}
+          /> 
+          {testCheckboxArr}
+          
           <FormSearch 
             selectedPto={selectedPto}
             setSelectedPto={setSelectedPto}
@@ -45,22 +62,22 @@ function CatalogDark() {
           />
 
           <div class="catalog-section__grid"> 
-                  <Card type="plast" pto={selectedPto} plastPorts="0000" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="H" onAddedToCart={handleItemAddedToCart} />
-                  <Card type="plast" pto={selectedPto} plastPorts="1004" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="H" onAddedToCart={handleItemAddedToCart} />
-                  <Card type="plast" pto={selectedPto} plastPorts="0230" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="H" onAddedToCart={handleItemAddedToCart} />
-                  <Card type="plast" pto={selectedPto} plastPorts="1234" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="H" onAddedToCart={handleItemAddedToCart} />
-                  <Card type="plast" pto={selectedPto} plastPorts="0000" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="L" onAddedToCart={handleItemAddedToCart} />
-                  <Card type="plast" pto={selectedPto} plastPorts="1004" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="L" onAddedToCart={handleItemAddedToCart} />
-                  <Card type="plast" pto={selectedPto} plastPorts="0230" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="L" onAddedToCart={handleItemAddedToCart} />
-                  <Card type="plast" pto={selectedPto} plastPorts="1234" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="L" onAddedToCart={handleItemAddedToCart} />
-                  <Card type="uplot" pto={selectedPto} uplotPosition="center"  selectedRubberMark={selectedRubberMark}  onAddedToCart={handleItemAddedToCart}/>
-                  <Card type="uplot" pto={selectedPto} uplotPosition="start"  selectedRubberMark={selectedRubberMark}  onAddedToCart={handleItemAddedToCart}/>
-                  <Card type="uplot" pto={selectedPto} uplotPosition="end"  selectedRubberMark={selectedRubberMark}  onAddedToCart={handleItemAddedToCart}/>
+                  <Card cardType="plast" cart={cartList} pto={selectedPto} plastPorts="0000" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="H" onAddedToCart={handleItemAddedToCart} />
+                  <Card cardType="plast" cart={cartList}  pto={selectedPto} plastPorts="1004" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="H" onAddedToCart={handleItemAddedToCart} />
+                  <Card cardType="plast" cart={cartList}  pto={selectedPto} plastPorts="0230" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="H" onAddedToCart={handleItemAddedToCart} />
+                  <Card cardType="plast" cart={cartList}  pto={selectedPto} plastPorts="1234" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="H" onAddedToCart={handleItemAddedToCart} />
+                  <Card cardType="plast" cart={cartList}  pto={selectedPto} plastPorts="0000" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="L" onAddedToCart={handleItemAddedToCart} />
+                  <Card cardType="plast" cart={cartList}  pto={selectedPto} plastPorts="1004" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="L" onAddedToCart={handleItemAddedToCart} />
+                  <Card cardType="plast" cart={cartList}  pto={selectedPto} plastPorts="0230" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="L" onAddedToCart={handleItemAddedToCart} />
+                  <Card cardType="plast" cart={cartList}  pto={selectedPto} plastPorts="1234" selectedMetall={selectedMetall} selectedThinckness={selectedThinckness} plastCanals="L" onAddedToCart={handleItemAddedToCart} />
+                  <Card cardType="uplot" cart={cartList}  pto={selectedPto} uplotPosition="center"  selectedRubberMark={selectedRubberMark}  onAddedToCart={handleItemAddedToCart}/>
+                  <Card cardType="uplot" cart={cartList}  pto={selectedPto} uplotPosition="start"  selectedRubberMark={selectedRubberMark}  onAddedToCart={handleItemAddedToCart}/>
+                  <Card cardType="uplot" cart={cartList}  pto={selectedPto} uplotPosition="end"  selectedRubberMark={selectedRubberMark}  onAddedToCart={handleItemAddedToCart}/>
           </div>
           <h3 className="catalog-section__title">Порты</h3>
         </div>
 
-        <CartDesc cartList={cartList}/>
+        <CartDesc cartList={cartList} onDelete={handleItemAddedToCart}/>
       </section>
         
     );

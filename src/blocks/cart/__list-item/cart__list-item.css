@@ -1,3 +1,4 @@
 .cart__list-item {
     display: flex;
+    margin-bottom: 5px;
 }
