@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../../logo.svg';
 import Burton from '../Burton/Burton';
 import CatalogDark from '../CatalogDarkSection/CatalogDarkSection';
+import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import Intro from '../Intro/Intro';
 
 
@@ -11,9 +12,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="header">
-        <Burton />
-      </header>
+      <HeaderMenu />
+      <Burton />
       <Intro />
       <CatalogDark changecartfunction={setCardState} />
     </div>

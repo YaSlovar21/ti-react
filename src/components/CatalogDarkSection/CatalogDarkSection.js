@@ -8,7 +8,9 @@ import CartDesc from "../CartDesc/CartDesc";
 import './CatalogDarkSection.css';
 import plateTest from '../../images/ti/plasttest.png';
 import CheckboxGroup from "../CheckboxGroup/CheckboxGroup";
-
+import ButtonWithRadioGroup from "../ButtonWithRadioGroup/ButtonWithRadioGroup";
+import CardPlita from "../CardPlita/CardPlita";
+import RadioGroup from "../RadioGroup/RadioGroup";
 
 function CatalogDark() {
     
@@ -21,6 +23,7 @@ function CatalogDark() {
     const [selectedThinckness, setSelectedThinckness] = React.useState('0.5');
 
     const [selectedDu, setSelectedDu] = React.useState('');
+    const [selectedPortsType, setSelectedPortsType] = React.useState('undef')
 
     function handleItemAddedToCart(item) {
       if (!cartList.includes(item)) {
@@ -49,6 +52,17 @@ function CatalogDark() {
           /> 
           {testCheckboxArr}
           
+          <ButtonWithRadioGroup 
+                selected={selectedPto}
+                onChangeSelected={setSelectedPto}
+                tags={[
+                    {value: '025', text: 'ТИ025'}, 
+                    {value: '077', text: 'ТИ077'},
+                    {value: '13', text: 'ТИ13'},
+                    {value: '18', text: 'ТИ18'},
+                ]}  
+            />
+
           <FormSearch 
             selectedPto={selectedPto}
             setSelectedPto={setSelectedPto}
@@ -75,9 +89,27 @@ function CatalogDark() {
                   <Card cardType="uplot" cart={cartList}  pto={selectedPto} uplotPosition="end"  selectedRubberMark={selectedRubberMark}  onAddedToCart={handleItemAddedToCart}/>
           </div>
           <h3 className="catalog-section__title">Порты</h3>
+          <RadioGroup 
+                tags={[
+                    {value: 'gost', text: 'Фланец'}, 
+                    {value: 'shtu', text: 'Штуцер'}
+                ]}  
+                selected={selectedPortsType}
+                onChangeSelected={setSelectedPortsType}
+                title="Тип присоединения"
+          />
+
+          <div class="catalog-section__grid"> 
+                <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1234" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
+                <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1200" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
+
+                <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="1200" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
+                <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="0034" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
+                <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="0000" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
+          </div>
         </div>
 
-        <CartDesc cartList={cartList} onDelete={handleItemAddedToCart}/>
+        <CartDesc cartList={cartList} onDelete={handleItemAddedToCart} />
       </section>
         
     );

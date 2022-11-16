@@ -10,6 +10,7 @@ import poster2 from '../../images/ti/poster-blue.svg';
 
 function Burton() {
     return (
+      
         <div className="burton header__burton">
           <div className="burton__preamble">
             <h1 className="header__title">Разборные пластинчатые теплообменники</h1>
@@ -26,6 +27,7 @@ function Burton() {
             </figure>
           </div>
         </div>
+      
     );
 }
 

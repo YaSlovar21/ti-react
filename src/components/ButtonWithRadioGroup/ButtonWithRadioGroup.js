@@ -17,7 +17,7 @@ function ButtonWithRadioGroup(props) {
     }
 
     return (
-        <>
+        <div className="buttonwithradiogroup">
         { 
             isRadioGroupVisible 
                 ? <RadioGroup 
@@ -27,7 +27,7 @@ function ButtonWithRadioGroup(props) {
                     /> 
                 : <button className="radiogroup__button radiogroup__button_up" onClick={handleButtonClick}>ТИ{props.selected}</button>
         }
-        </>
+        </div>
     );
 }
 

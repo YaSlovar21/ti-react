@@ -11,16 +11,7 @@ function FormSearch(props) {
     return (
         <form className="form-search">
 
-            <ButtonWithRadioGroup 
-                selected={props.selectedPto}
-                onChangeSelected={props.setSelectedPto}
-                tags={[
-                    {value: '025', text: 'ТИ025'}, 
-                    {value: '077', text: 'ТИ077'},
-                    {value: '13', text: 'ТИ13'},
-                    {value: '18', text: 'ТИ18'},
-                ]}  
-            />
+            
 
             <input disabled style={{width: 1000, marginTop: 40, marginBottom: 20}} value={`Фильтр на ТИ${props.selectedPto}   ${props.selectedMetall} and ${props.selectedRubberMark} and ${props.selectedThinckness}mm`} />
 

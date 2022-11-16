@@ -7,7 +7,7 @@ function Card(props) {
   const [isRenderingg, setIsRenderingg] = React.useState(false);
 
     React.useEffect(()=>{
-        this.classList.add('fadeIn');
+        
     },[props.selectedMetall])
 
     // в пропсах спускаем в карточку "в корзине ли она"
