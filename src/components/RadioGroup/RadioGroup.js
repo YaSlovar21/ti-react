@@ -11,7 +11,10 @@ function RadioGroup(props) {
   function genClassName(buttonvalue) {
     return `radiogroup__button ${props.selected === buttonvalue ? "radiogroup__button_active" : ""}`;
   }
+ 
+  const [selected, setSelected] = React.useState(props.selected);
 
+ 
   return (
     <div className="radiogroup">
       {props.tags.map((element, i) => (
@@ -19,7 +22,7 @@ function RadioGroup(props) {
           type="button"
           id={i}
           value={element.value}
-          className={genClassName(element.value)}
+          className={`radiogroup__button ${props.selected === element.value ? "radiogroup__button_active" : ""}`}
           onClick={handleRadioClick}
         >
           {element.text}

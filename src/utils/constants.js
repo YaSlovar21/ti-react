@@ -1,4 +1,26 @@
-const apparats = [
+export const du = {
+  '025': [25, 32, 40],
+  '077': [25, 32, 40],
+  '13': [50, 65],
+  '18': [50, 65],
+  '16-5': [80],
+  '28': [65],
+  '45': [100, 125],
+  '52': [150],
+  '65': [50, 65],
+  '82': [150],
+  '95': [200, 250],
+  '116': [200, 250],
+}
+
+export const portType = {
+  '025': ['shtu'],
+  '077': ['shtu'],
+  '13': ['sthu', 'gost'],
+  '18': ['shtu', 'gost']
+}
+
+export const apparats = [
     { 
       pto : 'ti-025', 
       du: [25, 35],
@@ -22,7 +44,7 @@ const apparats = [
 
   ]
 
-  const items = [
+  export const items = [
   { 
     id: 1,
     type: 'plast',

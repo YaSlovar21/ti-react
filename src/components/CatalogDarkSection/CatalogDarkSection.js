@@ -6,11 +6,13 @@ import Card from "../Card/Card";
 import CartDesc from "../CartDesc/CartDesc";
 
 import './CatalogDarkSection.css';
-import plateTest from '../../images/ti/plasttest.png';
+
 import CheckboxGroup from "../CheckboxGroup/CheckboxGroup";
 import ButtonWithRadioGroup from "../ButtonWithRadioGroup/ButtonWithRadioGroup";
 import CardPlita from "../CardPlita/CardPlita";
 import RadioGroup from "../RadioGroup/RadioGroup";
+
+import { du, portType } from "../../utils/constants";
 
 function CatalogDark() {
     
@@ -22,7 +24,24 @@ function CatalogDark() {
     const [selectedRubberMark, setSelectedRubberMark] = React.useState('EPDM');
     const [selectedThinckness, setSelectedThinckness] = React.useState('0.5');
 
-    const [selectedDu, setSelectedDu] = React.useState('');
+    
+    const [selectedDuList, setSelectedDuList] = React.useState(
+      du[selectedPto].map((element,i) => `DU${element}`)
+    );
+  
+    const [selectedDu, setSelectedDu] = React.useState(du[selectedPto]);
+
+    React.useEffect(()=> {
+      setSelectedDuList(du[selectedPto].map(function(element) {
+       return {
+        value: `DU${element} `,
+        text: `ДУ${element} `
+       } 
+      }));
+
+      setSelectedDu(`DU${du[selectedPto][0]}`)
+    },[selectedPto])
+
     const [selectedPortsType, setSelectedPortsType] = React.useState('undef')
 
     function handleItemAddedToCart(item) {
@@ -34,7 +53,6 @@ function CatalogDark() {
     }
 
     const [testCheckboxArr, setCheckboxArr] = React.useState([]);
-
 
     return (
       <section class="catalog-section">
@@ -98,7 +116,16 @@ function CatalogDark() {
                 onChangeSelected={setSelectedPortsType}
                 title="Тип присоединения"
           />
-
+         
+          {selectedDuList.map(el => ( el['value']))}
+          {selectedDu}
+          <RadioGroup 
+                tags={selectedDuList}  
+                selected={selectedDu}
+                onChangeSelected={setSelectedDu}
+                title="Тип присоединения"
+          />
+            
           <div class="catalog-section__grid"> 
                 <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1234" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
                 <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1200" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
