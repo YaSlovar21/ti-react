@@ -1,0 +1,92 @@
+export const ports = [
+  {
+    du: "DU20",
+    name: 'Штуцер резьбовой прямой AISI304 3/4"',
+    nazn: "GKH",
+    imageUrl: "shtu-180-0_75_d",
+  },
+  {
+    du: "DU25",
+    name: 'Штуцер резьбовой прямой AISI304 1"',
+    nazn: "GKH",
+    imageUrl: "shtu-180-1d",
+  },
+  {
+    du: "DU25",
+    name: 'Штуцер резьбовой 90° AISI304 1"',
+    nazn: "GKH",
+    imageUrl: "shtu-90-1d",
+  },
+  {
+    du: "DU32",
+    name: 'Штуцер резьбовой прямой AISI304   1   1/4"',
+    nazn: "GKH",
+    imageUrl: "shtu-180-1_25_d",
+  },
+  {
+    du: "DU32",
+    name: 'Штуцер резьбовой 90° AISI304 1  1/4"',
+    nazn: "GKH",
+    imageUrl: "shtu-90-1_25_d",
+  },
+  {
+    du: "DU32",
+    name: 'Штуцер резьбовой прямой AISI304  1  1/4"-1',
+    nazn: "GKH",
+    imageUrl: "shtu-180-1_25_d-1",
+  },
+  {
+    du: "DU32",
+    name: 'Штуцер резьбовой прямой AISI304  1  1/4"-2',
+    nazn: "GKH",
+    imageUrl: "shtu-180-1_25_d-2",
+  },
+  {
+    du: "DU40",
+    name: 'Штуцер резьбовой прямой AISI304  1  1/2"',
+    nazn: "GKH",
+    imageUrl: "shtu-180-1_5_d",
+  },
+  {
+    du: "DU40",
+    name: 'Штуцер резьбовой 90° AISI304 1  1/2"',
+    nazn: "GKH",
+    imageUrl: "shtu-90-1_5_d",
+  },
+  {
+    du: "DU40",
+    name: 'Штуцер резьбовой прямой AISI304  1  1/2"-1',
+    nazn: "GKH",
+    imageUrl: "shtu-180-1_5_d-1",
+  },
+  {
+    du: "DU40",
+    name: 'Штуцер резьбовой прямой AISI304  1  1/2"-2',
+    nazn: "GKH",
+    imageUrl: "shtu-180-1_5_d-2",
+  },
+  {
+    du: "DU50",
+    name: 'Штуцер резьбовой прямой AISI304 2"-1',
+    nazn: "GKH",
+    imageUrl: "shtu-180-2_d-1",
+  },
+  {
+    du: "DU50",
+    name: 'Штуцер резьбовой прямой AISI304 2"-2',
+    nazn: "GKH",
+    imageUrl: "shtu-180-2_d-2",
+  },
+  {
+    du: "DU50",
+    name: 'Штуцер резьбовой прямой AISI304   2 1/2"-1',
+    nazn: "GKH",
+    imageUrl: "shtu-180-2_5_d-1",
+  },
+  {
+    du: "DU65",
+    name: 'Штуцер резьбовой прямой AISI304 2 1/2"-2',
+    nazn: "GKH",
+    imageUrl: "shtu-180-2_5_d-2",
+  },
+];

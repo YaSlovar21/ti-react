@@ -12,8 +12,9 @@ function RadioGroup(props) {
     return `radiogroup__button ${props.selected === buttonvalue ? "radiogroup__button_active" : ""}`;
   }
  
-  const [selected, setSelected] = React.useState(props.selected);
-
+  React.useEffect(()=> {
+    //props.onChangeSelected(props.selected)
+  })
  
   return (
     <div className="radiogroup">

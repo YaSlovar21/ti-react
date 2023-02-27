@@ -29,12 +29,12 @@ function Intro() {
                 <li className="mainpage-about__grid-item">
                     <h3 className="section-subtitle">Программа расчёта пластинчатых теплообменников</h3>
                     <p className="bem__paragraph mainpage-about__paragraph" style={{margin: '20px 0'}}>Разработанная нами программа предназначена для расчета и подбора пластинчатого теплообменника. Для расчета нужно внести все необходимые данные по температурам, давлению и мощности.</p>
-                    <Link className="bem__link bem__link_download-right  mainpage-about__action-link" to="#">Скачать программу</Link>
+                    <a className="bem__link bem__link_download-right  mainpage-about__action-link" href="http://static.tochka-izloma.ru.website.yandexcloud.net/soft/Точка-излома-2023-1-Программа-РТО.rar">Скачать программу</a>
                 </li>
                 <li className="mainpage-about__grid-item">
-                    <h3 className="section-subtitle">Регистрация в личном кабинете</h3>
-                    <p className="bem__paragraph mainpage-about__paragraph" style={{margin: '20px 0'}}>Партнеры компании имеют всестороннюю консультационную поддержку, обеспечиваются конструкторской и технической документацией. Производственные мощности компании «Точка излома» позволяют удовлетворить заказ любого объема, а служба логистики доставить его в максимально короткий срок на склад компании-партнера, при этом затраты на логистику компания берет на себя. Разработана эффективная и прозрачная система скидок, кроме того, надежным партнерам предлагается кредитование при заказе продукции.</p>
-                    <Link className="bem__link mainpage-about__action-link" to="#">Зарегистрироваться в кабинете партнёра &#8594;</Link>
+                    <h3 className="section-subtitle">Регистрация</h3>
+                    <p className="bem__paragraph mainpage-about__paragraph" style={{margin: '20px 0'}}>Введите свои реквизиты и данные о компании, чтобы мы могли выставить счёт.</p>
+                    <Link className="bem__link mainpage-about__action-link" to="#">Ввести реквизиты &#8594;</Link>
                 </li>
             </ul>
         </section>

@@ -13,6 +13,8 @@ import CardPlita from "../CardPlita/CardPlita";
 import RadioGroup from "../RadioGroup/RadioGroup";
 
 import { du, portType } from "../../utils/constants";
+import { ports } from "../../utils/ports";
+import Ports from "../Ports/Ports";
 
 function CatalogDark() {
     
@@ -34,8 +36,8 @@ function CatalogDark() {
     React.useEffect(()=> {
       setSelectedDuList(du[selectedPto].map(function(element) {
        return {
-        value: `DU${element} `,
-        text: `ДУ${element} `
+        value: `DU${element}`,
+        text: `ДУ${element}`
        } 
       }));
 
@@ -106,37 +108,45 @@ function CatalogDark() {
                   <Card cardType="uplot" cart={cartList}  pto={selectedPto} uplotPosition="start"  selectedRubberMark={selectedRubberMark}  onAddedToCart={handleItemAddedToCart}/>
                   <Card cardType="uplot" cart={cartList}  pto={selectedPto} uplotPosition="end"  selectedRubberMark={selectedRubberMark}  onAddedToCart={handleItemAddedToCart}/>
           </div>
-          <h3 className="catalog-section__title">Порты</h3>
-          <RadioGroup 
-                tags={[
-                    {value: 'gost', text: 'Фланец'}, 
-                    {value: 'shtu', text: 'Штуцер'}
-                ]}  
-                selected={selectedPortsType}
-                onChangeSelected={setSelectedPortsType}
-                title="Тип присоединения"
-          />
-         
-          {selectedDuList.map(el => ( el['value']))}
-          {selectedDu}
-          <RadioGroup 
-                tags={selectedDuList}  
-                selected={selectedDu}
-                onChangeSelected={setSelectedDu}
-                title="Тип присоединения"
-          />
+          <div>
+            <h3 className="catalog-section__title">Порты</h3>
+            <div style={{'position': 'sticky', top: 60, backgroundColor: '#2f2f2f'}}>
+              <RadioGroup 
+                    tags={[
+                        {value: 'gost', text: 'Фланец'}, 
+                        {value: 'shtu', text: 'Штуцер'}
+                    ]}  
+                    selected={selectedPortsType}
+                    onChangeSelected={setSelectedPortsType}
+                    title="Тип присоединения"
+              />
             
-          <div class="catalog-section__grid"> 
-                <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1234" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
-                <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1200" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
+              {selectedDuList.map(el => ( el['value']))}
+              {selectedDu}
+              <RadioGroup 
+                    tags={selectedDuList}  
+                    selected={selectedDu}
+                    onChangeSelected={setSelectedDu}
+                    selectedPto={selectedPto}
+                    title="Тип присоединения"
+              />
+            </div> 
+            <div class="catalog-section__grid"> 
+                  <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1234" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
+                  <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1200" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
 
-                <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="1200" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
-                <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="0034" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
-                <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="0000" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
-          </div>
+                  <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="1200" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
+                  <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="0034" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
+                  <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="0000" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
+            </div>
+            <div class="catalog-section__grid">
+              <Ports selectedDu={selectedDu} />
+            </div>
+            </div>
         </div>
 
         <CartDesc cartList={cartList} onDelete={handleItemAddedToCart} />
+        
       </section>
         
     );

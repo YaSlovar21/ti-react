@@ -36,11 +36,11 @@ function Card(props) {
     return (
       <div className={`card card_cti `}>
         <div className="card__header">
-          <h3 className={`bem__title card__title_cti ${isRenderingg ? 'fadeIn': ''}`}>{ props.cardType === 'plast' ? 'Пластина': 'Уплотнение'} ТИ{props.pto} {props.plastPorts}{props.plastCanals} </h3>
+          <h3 className={`bem__title card__title_cti`}>{ props.cardType === 'plast' ? 'Пластина': 'Уплотнение'} ТИ{props.pto} {props.plastPorts}{props.plastCanals} </h3>
           
           {
             props.cardType === 'plast'
-              ? (<ul className={`card__linelist config-list ${isRenderingg ? 'fadeIn': ''}`}>
+              ? (<ul className={`card__linelist config-list`}>
               <li className="config-list__item">{props.selectedMetall}</li>
               <li className="config-list__item">{props.selectedThinckness}</li>
             </ul>)
