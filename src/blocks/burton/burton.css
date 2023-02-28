@@ -1,6 +1,7 @@
 .burton {
   display: flex;
   overflow: hidden;
+  background-color: var(--mainpage-ti-gray-color);
 }
 
 .burton__poster {

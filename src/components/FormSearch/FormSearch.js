@@ -9,12 +9,13 @@ import ButtonWithRadioGroup from "../ButtonWithRadioGroup/ButtonWithRadioGroup";
 function FormSearch(props) {
 
     return (
-        <form className="form-search">
+        <form className="form-search form-search_catalog">
 
             
-
+            {/*
             <input disabled style={{width: 1000, marginTop: 40, marginBottom: 20}} value={`Фильтр на ТИ${props.selectedPto}   ${props.selectedMetall} and ${props.selectedRubberMark} and ${props.selectedThinckness}mm`} />
-
+            */}
+            <span className="form-search__span form-search__span_catalog ">Материал пластины</span>
             <RadioGroup 
                 tags={[
                     {value: 'AISI316', text: 'AISI316'}, 
@@ -25,16 +26,7 @@ function FormSearch(props) {
                 title="Материал пластин"
             />
 
-            <RadioGroup 
-                tags={[
-                    {value: 'EPDM', text: 'EPDM'}, 
-                    {value: 'NBR', text: 'NBR'},
-                ]}  
-                selected={props.selectedRubberMark}
-                onChangeSelected={props.setSelectedRubberMark}
-                title="Материал уплотнений"
-            />
-
+            <span className="form-search__span form-search__span_catalog ">Толщина пластины</span>
             <RadioGroup 
                 tags={[
                     {value: '0.4', text: '0.4'}, 
@@ -45,6 +37,19 @@ function FormSearch(props) {
                 onChangeSelected={props.setSelectedThinckness}
                 title="Толщина пластин"
             />
+
+            <span className="form-search__span form-search__span_catalog ">Материал уплонений</span>
+            <RadioGroup 
+                tags={[
+                    {value: 'EPDM', text: 'EPDM'}, 
+                    {value: 'NBR', text: 'NBR'},
+                ]}  
+                selected={props.selectedRubberMark}
+                onChangeSelected={props.setSelectedRubberMark}
+                title="Материал уплотнений"
+            />
+
+            
             
         </form>
     )
