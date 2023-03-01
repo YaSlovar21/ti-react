@@ -34,7 +34,7 @@ function Intro() {
                 <li className="mainpage-about__grid-item">
                     <h3 className="section-subtitle">Регистрация</h3>
                     <p className="bem__paragraph mainpage-about__paragraph" style={{margin: '20px 0'}}>Введите свои реквизиты и данные о компании, чтобы мы могли выставить счёт.</p>
-                    <Link className="bem__link mainpage-about__action-link" to="#">Ввести реквизиты &#8594;</Link>
+                    <Link className="bem__link mainpage-about__action-link" to="/recv">Ввести реквизиты &#8594;</Link>
                 </li>
             </ul>
         </section>
