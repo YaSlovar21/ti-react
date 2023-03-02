@@ -1,5 +1,5 @@
 .cart {
-    min-width: 0;
+    min-width: 400px;
     flex-basis: 100%;
     margin-left: 20px;
     height: calc(100vh - 20px);

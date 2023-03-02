@@ -51,7 +51,7 @@
 
 @media screen and (max-width: 1600px) {
   :root {
-    --aside-width: 50px;
+    --aside-width: 20px;
     --burton-title-fontsize: 48px;
     --section-title-fontsize: 32px;
 

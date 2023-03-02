@@ -10,7 +10,7 @@
 }
 
 .catalog-section__aside_cart {
-  min-width: 0;
+  min-width: 400px;
   flex-basis: 100%;
 
   background-color: var(--mainpage-ti-gray-color);

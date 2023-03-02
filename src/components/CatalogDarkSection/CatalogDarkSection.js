@@ -110,6 +110,7 @@ function CatalogDark() {
                     {value: '077', text: 'ТИ077'},
                     {value: '13', text: 'ТИ13'},
                     {value: '18', text: 'ТИ18'},
+                    {value: '28', text: 'ТИ28'},
                 ]}  
             />
 
@@ -162,7 +163,7 @@ function CatalogDark() {
                     title="Тип присоединения"
               />
             </div> 
-            {/*
+            
             <div class="catalog-section__grid"> 
                   <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1234" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
                   <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1200" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
@@ -174,7 +175,7 @@ function CatalogDark() {
             <div class="catalog-section__grid">
               <Ports selectedDu={selectedDu} />
             </div>
-            */}
+            
             </div>
           
         </div>

@@ -2,7 +2,8 @@ import React from 'react';
 import './NavBar.css';
 import { NavLink } from 'react-router-dom';
 
-import logoUser from '../../images/ti/logo-user.svg'
+import logoUser from '../../images/ti/logo-user.svg';
+import logOutIcon from '../../images/ti/logout.svg';
 
 function NavBar({isLoggedIn, handleLogout}) {
 
@@ -19,7 +20,7 @@ function NavBar({isLoggedIn, handleLogout}) {
         </li>
       </ul>
       {isLoggedIn 
-        ? <span class="menu__item" style={{'display': 'flex', 'alignItems': 'center', 'color': 'black'}}><img src={logoUser} />{user.email} <button onClick={handleLogout}>x</button></span> 
+        ? <span class="menu__item" style={{'display': 'flex', 'alignItems': 'center', 'color': 'black'}}><img src={logoUser} />{user.email} <button onClick={handleLogout}><img src={logOutIcon} /></button></span> 
         :  <div class="nav__registration">
         <NavLink to="/recv" className="nav__registration-link">Регистрация</NavLink>
         <NavLink to="/recv" className="nav__registration-link nav__registration-link_enter">Войти</NavLink>

@@ -9,6 +9,13 @@
 .catalog-section__grid {
   display:grid; 
   grid-template-columns: repeat(4, 305px); 
+  
   padding: 40px 0; 
   gap:10px;
+}
+
+@media screen and (max-width: 1641px) {
+    .catalog-section__grid {
+      grid-template-columns: repeat(auto-fit, minmax(295px, 305px)); 
+    }
 }
