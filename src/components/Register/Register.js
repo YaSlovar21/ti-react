@@ -15,12 +15,15 @@ function Register({handleRegister}) {
   const formWithValidation = useFormWithValidation();
   const { handleChange, errors, isValid } = formWithValidation;
 
-  const { name, email, password } = formWithValidation.values;
+  const { inn, email, tel } = formWithValidation.values;
   function handleSubmit(evt) {
         evt.preventDefault();
-        console.log(JSON.stringify({name, password, email}));
-        handleRegister(name, password, email);
+        console.log(JSON.stringify({inn, email, tel}));
+        localStorage.setItem('reg', JSON.stringify({inn, email, tel}));
+        handleRegister();
+        // handleRegister(inn, email, tel);
         formWithValidation.resetForm();
+        
   }
   return (
     <Form onSubmit={handleSubmit}>
@@ -29,7 +32,7 @@ function Register({handleRegister}) {
      
       <label className="form__label">Инн</label>
       <input
-        name="name"
+        name="inn"
         className="form__input"
         onChange={handleChange}
         type="text"
@@ -37,7 +40,7 @@ function Register({handleRegister}) {
         minLength="2"
         required
       />
-      <span className="form__span-error">{errors.name}</span>
+      <span className="form__span-error">{errors.inn}</span>
       <label className="form__label">E-mail</label>
       <input 
         name="email"
@@ -51,7 +54,7 @@ function Register({handleRegister}) {
       <span className="form__span-error">{errors.email}</span>
       <label className="form__label">Телефон</label>
       <input 
-        name="password"
+        name="tel"
         className="form__input form__input_password"
         onChange={handleChange}
         type="text"
@@ -59,7 +62,7 @@ function Register({handleRegister}) {
         minLength="8"
         required
       />
-      <span className="form__span-error">{errors.password}</span>
+      <span className="form__span-error">{errors.tel}</span>
       <button 
         type="submit"
         disabled={!isValid}

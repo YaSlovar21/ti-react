@@ -18,8 +18,27 @@ import Ports from "../Ports/Ports";
 
 import { pricesWithId } from "../../utils/constants";
 
+import { sendOrder } from "../../utils/mainApi";
+
+
 function CatalogDark() {
-    
+    const user = JSON.parse(localStorage.getItem('reg'));
+
+    function getAliasById(elemId){
+      return pricesWithId.filter(item => item.id === elemId)[0]['alias'];
+  }
+
+    function cartListToAliases() {
+      return cartList.map(item => getAliasById(item))
+    }
+
+    function handleSendOrder() {
+      const jsonString = JSON.stringify(Object.assign({}, cartListToAliases().concat( user.email ? user.email : '')))
+      console.log(jsonString);
+      sendOrder(jsonString);
+      setCartList([]);
+    }
+
     const [cartList, setCartList] = React.useState([]);
 
     const [selectedPto, setSelectedPto] = React.useState('025');
@@ -34,6 +53,11 @@ function CatalogDark() {
     );
   
     const [selectedDu, setSelectedDu] = React.useState(du[selectedPto]);
+
+
+    React.useEffect(()=> {
+      console.log(cartList)
+    }, [cartList])
 
     React.useEffect(()=> {
       setSelectedDuList(du[selectedPto].map(function(element) {
@@ -54,6 +78,7 @@ function CatalogDark() {
       } else {
         setCartList(cartList.filter(v => v !== item));
       }
+
     }
 
     const [testCheckboxArr, setCheckboxArr] = React.useState([]);
@@ -154,7 +179,7 @@ function CatalogDark() {
           
         </div>
 
-        <CartDesc cartList={cartList} aliases={pricesWithId} onDelete={handleItemAddedToCart} />
+        <CartDesc cartList={cartList} aliases={pricesWithId} onDelete={handleItemAddedToCart} handleSendOrder={handleSendOrder} />
         
       </section>
         

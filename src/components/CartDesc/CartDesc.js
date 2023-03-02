@@ -34,7 +34,7 @@ function CartDesc(props) {
                     </li>
                 ))}
                 </ul>
-                <button className="cart__send-button">Отправить заказ</button>
+                <button className="cart__send-button" onClick={props.handleSendOrder}>Отправить заказ</button>
                 </>
                 )
             }

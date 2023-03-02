@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './Intro.css';
 
-function Intro() {
+import logoUser from '../../images/ti/logo-user.svg'
+
+function Intro({isLoggedIn}) {
+    const user = JSON.parse(localStorage.getItem('reg'));
     return (
         <>
-        <style>
-            
-        </style>
         <section className="mainpage-about">
         <h2 className="section-title section-title_ti">О компании</h2>
             <ul className="mainpage-about__grid">
@@ -34,7 +34,7 @@ function Intro() {
                 <li className="mainpage-about__grid-item">
                     <h3 className="section-subtitle">Регистрация</h3>
                     <p className="bem__paragraph mainpage-about__paragraph" style={{margin: '20px 0'}}>Введите свои реквизиты и данные о компании, чтобы мы могли выставить счёт.</p>
-                    <Link className="bem__link mainpage-about__action-link" to="/recv">Ввести реквизиты &#8594;</Link>
+                    {isLoggedIn ? <span class="menu__item" style={{'display': 'flex', 'alignItems': 'center', 'color': 'black'}}>Вы вошли как:<img src={logoUser} />{user.email}</span> : <Link className="bem__link mainpage-about__action-link" to="/recv">Ввести реквизиты &#8594;</Link> }
                 </li>
             </ul>
         </section>

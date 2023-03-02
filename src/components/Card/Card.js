@@ -31,7 +31,7 @@ function Card(props) {
     }
     
     function getAliasById(elemId){
-      console.log(props.aliases.filter(item => item.id === elemId))
+      //console.log(props.aliases.filter(item => item.id === elemId))
       return props.aliases.filter(item => item.id === elemId)[0];
     }
 
