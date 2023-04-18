@@ -28,7 +28,7 @@ function CartDesc(props) {
                 <ul className="cart__list">
                 {props.cartList.map((elem, i)=> (
                     <li className="cart__list-item">
-                        <h3 className="cart__goods-title">{getAliasById(elem)['alias']} ({getAliasById(elem)['price']} руб./шт)</h3>
+                        <h3 className="cart__goods-title">{getAliasById(elem)['name']} ({getAliasById(elem)['price']} руб./шт)</h3>
                         <FormPlusminus />
                         <button type="button" value={elem} onClick={handleDelete}>x</button>
                     </li>

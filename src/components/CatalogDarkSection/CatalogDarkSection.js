@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import FormSearch from "../FormSearch/FormSearch";
 import Card from "../Card/Card";
 import CartDesc from "../CartDesc/CartDesc";
+import Plits from "../Plits/Plits";
+import Ports from "../Ports/Ports";
+
+
 
 import './CatalogDarkSection.css';
 
@@ -14,18 +18,21 @@ import RadioGroup from "../RadioGroup/RadioGroup";
 
 import { du, portType } from "../../utils/constants";
 import { ports } from "../../utils/ports";
-import Ports from "../Ports/Ports";
 
-import { pricesWithId } from "../../utils/constants";
+
+// -------------------------МАССИВЫ ЧАСТЕЙ ПРАЙСА---------------------------------//
+import { pricesWithId , plitsItems, stbItems } from "../../utils/constants";
+
 
 import { sendOrder } from "../../utils/mainApi";
+
 
 
 function CatalogDark() {
     const user = JSON.parse(localStorage.getItem('reg'));
 
     function getAliasById(elemId){
-      return pricesWithId.filter(item => item.id === elemId)[0]['alias'];
+      return pricesWithId.concat(plitsItems).filter(item => item.id === elemId)[0]['name'];
   }
 
     function cartListToAliases() {
@@ -111,6 +118,7 @@ function CatalogDark() {
                     {value: '13', text: 'ТИ13'},
                     {value: '18', text: 'ТИ18'},
                     {value: '28', text: 'ТИ28'},
+                    {value: '45', text: 'ТИ45'},
                 ]}  
             />
 
@@ -139,48 +147,41 @@ function CatalogDark() {
                   <Card cardType="uplot" cart={cartList}  pto={selectedPto} uplotPosition="start"  selectedRubberMark={selectedRubberMark}  onAddedToCart={handleItemAddedToCart} aliases={pricesWithId}/>
                   <Card cardType="uplot" cart={cartList}  pto={selectedPto} uplotPosition="end"  selectedRubberMark={selectedRubberMark}  onAddedToCart={handleItemAddedToCart} aliases={pricesWithId}/>
           </div>
-          <p style={{'color': 'white'}}>Разделы далее в разработке</p>
-          <div style={{'opacity': '0.2'}}>
-            <h3 className="catalog-section__title">Порты</h3>
-            <div style={{'position': 'sticky', top: 60, backgroundColor: '#2f2f2f'}}>
-              <RadioGroup 
-                    tags={[
-                        {value: 'gost', text: 'Фланец'}, 
-                        {value: 'shtu', text: 'Штуцер'}
-                    ]}  
-                    selected={selectedPortsType}
-                    onChangeSelected={setSelectedPortsType}
-                    title="Тип присоединения"
-              />
+       
+          <h3 className="catalog-section__title">Порты</h3>
+          <div style={{'position': 'sticky', top: 60, backgroundColor: '#2f2f2f'}}>
+            <RadioGroup 
+                  tags={[
+                      {value: 'gost', text: 'Фланец'}, 
+                      {value: 'shtu', text: 'Штуцер'}
+                  ]}  
+                  selected={selectedPortsType}
+                  onChangeSelected={setSelectedPortsType}
+                  title="Тип присоединения"
+            />
+          
+            {selectedDuList.map(el => ( el['value']))}
+            {selectedDu}
+            <RadioGroup 
+                  tags={selectedDuList}  
+                  selected={selectedDu}
+                  onChangeSelected={setSelectedDu}
+                  selectedPto={selectedPto}
+                  title="Тип присоединения"
+            />
+          </div> 
+          
+          <div class="catalog-section__grid"> 
+            <Plits cart={cartList} selectedDu={selectedDu} selectedPto={selectedPto} onAddedToCart={handleItemAddedToCart} aliases={plitsItems}/>
+          </div>
+          <div class="catalog-section__grid">
+            <Ports selectedDu={selectedDu} />
+          </div>
             
-              {selectedDuList.map(el => ( el['value']))}
-              {selectedDu}
-              <RadioGroup 
-                    tags={selectedDuList}  
-                    selected={selectedDu}
-                    onChangeSelected={setSelectedDu}
-                    selectedPto={selectedPto}
-                    title="Тип присоединения"
-              />
-            </div> 
-            
-            <div class="catalog-section__grid"> 
-                  <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1234" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
-                  <CardPlita cardType="stanina" cart={cartList} pto={selectedPto} config="1200" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
-
-                  <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="1200" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
-                  <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="0034" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
-                  <CardPlita cardType="plita" cart={cartList} pto={selectedPto} config="0000" dn="40" type="shtu" onAddedToCart={handleItemAddedToCart} />
-            </div>
-            <div class="catalog-section__grid">
-              <Ports selectedDu={selectedDu} />
-            </div>
-            
-            </div>
           
         </div>
 
-        <CartDesc cartList={cartList} aliases={pricesWithId} onDelete={handleItemAddedToCart} handleSendOrder={handleSendOrder} />
+        <CartDesc cartList={cartList} aliases={pricesWithId.concat(plitsItems)} onDelete={handleItemAddedToCart} handleSendOrder={handleSendOrder} />
         
       </section>
         
