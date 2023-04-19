@@ -21,7 +21,7 @@ import { ports } from "../../utils/ports";
 
 
 // -------------------------МАССИВЫ ЧАСТЕЙ ПРАЙСА---------------------------------//
-import { pricesWithId , plitsItems, stbItems } from "../../utils/constants";
+import { pricesWithId , plitsItems, portsItems, stbItems } from "../../utils/constants";
 
 
 import { sendOrder } from "../../utils/mainApi";
@@ -32,7 +32,7 @@ function CatalogDark() {
     const user = JSON.parse(localStorage.getItem('reg'));
 
     function getAliasById(elemId){
-      return pricesWithId.concat(plitsItems).filter(item => item.id === elemId)[0]['name'];
+      return pricesWithId.concat(plitsItems).concat(portsItems).filter(item => item.id === elemId)[0]['name'];
   }
 
     function cartListToAliases() {
@@ -119,6 +119,9 @@ function CatalogDark() {
                     {value: '18', text: 'ТИ18'},
                     {value: '28', text: 'ТИ28'},
                     {value: '45', text: 'ТИ45'},
+                    {value: '52', text: 'ТИ52'},
+                    {value: '65', text: 'ТИ65'},
+                    {value: '82', text: 'ТИ82'}
                 ]}  
             />
 
@@ -172,16 +175,16 @@ function CatalogDark() {
           </div> 
           
           <div class="catalog-section__grid"> 
-            <Plits cart={cartList} selectedDu={selectedDu} selectedPto={selectedPto} onAddedToCart={handleItemAddedToCart} aliases={plitsItems}/>
+            <Plits cart={cartList} selectedDu={selectedDu} selectedPto={selectedPto} onAddedToCart={handleItemAddedToCart} />
           </div>
           <div class="catalog-section__grid">
-            <Ports selectedDu={selectedDu} />
+            <Ports cart={cartList} selectedDu={selectedDu} selectedPto={selectedPto} onAddedToCart={handleItemAddedToCart} />
           </div>
             
           
         </div>
 
-        <CartDesc cartList={cartList} aliases={pricesWithId.concat(plitsItems)} onDelete={handleItemAddedToCart} handleSendOrder={handleSendOrder} />
+        <CartDesc cartList={cartList} aliases={pricesWithId.concat(plitsItems).concat(portsItems)} onDelete={handleItemAddedToCart} handleSendOrder={handleSendOrder} />
         
       </section>
         

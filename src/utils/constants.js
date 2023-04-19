@@ -3,7 +3,7 @@ export const du = {
   '077': [25, 32, 40],
   '13': [50, 65],
   '18': [50, 65],
-  '16-5': [80],
+  '165': [80],
   '28': [65],
   '45': [100, 125],
   '52': [150],
@@ -3806,41 +3806,52 @@ export const stbItems = [
 
 export const portsItems = [
   {
+    id: "portelem1",
     DN: "DN20",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 3/4"',
     price: "252.21",
+    image: "shtu-180-0_75_d.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem2",
     DN: "DN20",
     material: "AISI304",
     name: "Штуцер резьбовой 90° DN20 AISI304 DIN11850",
     price: "707.96",
+    image: "shtu-90-DN20-DIN11850.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem3",
     DN: "DN25",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 1"',
     price: "277.88",
+    image: "shtu-180-1d.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem4",
     DN: "DN25",
     material: "AISI304",
     name: 'Штуцер резьбовой 90° AISI304 1"',
     price: "554.87",
+    image: "shtu-90-1d.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem5",
     DN: "DN25",
     material: "AISI304",
     name: "Штуцер резьбовой 90° DN25 AISI304 DIN11850",
     price: "698.23",
+    image: "shtu-90-DN25-DIN11850.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem6",
     DN: "DN25",
     material: "EPDM(p)",
     name: "Уплотнительное кольцо DN25 DIN11851 EPDM(p)",
@@ -3848,6 +3859,7 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem7",
     DN: "DN25",
     material: "NBR(p)",
     name: "Уплотнительное кольцо DN25 DIN11851 NBR(p)",
@@ -3855,55 +3867,70 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem8",
     DN: "DN32",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 1 1/4"',
     price: "307.08",
+    image: "shtu-180-1_25_d.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem9",
     DN: "DN32",
     material: "AISI304",
     name: 'Штуцер резьбовой 90° AISI304 1 1/4"',
     price: "635.4",
+    image: "shtu-90-1_25_d.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem10",
     DN: "DN32",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 1 1/4"-1',
     price: "384.07",
+    image: "shtu-180-1_25_d-1.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem11",
     DN: "DN32",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 1 1/4"-2',
     price: "519.47",
+    image: "shtu-180-1_25_d-2.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem12",
     DN: "DN32",
     material: "AISI304",
     name: "Штуцер резьбовой 90° DN32 AISI304 DIN11850",
     price: "802.65",
+    image: "shtu-90-DN32-DIN11850.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem13",
     DN: "DN32",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN32 DIN11850-1",
     price: "643.36",
+    image: "shtu-pryam-AISI304-DN32-DIN11850-1.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem14",
     DN: "DN32",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN32 DIN11850-2",
     price: "777.88",
+    image: "shtu-pryam-AISI304-DN32-DIN11850-2.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem15",
     DN: "DN32",
     material: "EPDM(p)",
     name: "Уплотнительное кольцо DN32 DIN11851 EPDM(p)",
@@ -3911,6 +3938,7 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem16",
     DN: "DN32",
     material: "NBR(p)",
     name: "Уплотнительное кольцо DN32 DIN11851 NBR(p)",
@@ -3918,55 +3946,70 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem17",
     DN: "DN40",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 1 1/2"',
     price: "358.41",
+    image: "shtu-180-1_5_d.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem18",
     DN: "DN40",
     material: "AISI304",
     name: 'Штуцер резьбовой 90° AISI304 1 1/2"',
     price: "855.75",
+    image: "shtu-90-1_5_d.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem19",
     DN: "DN40",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 1 1/2"-1',
     price: "468.14",
+    image: "shtu-180-1_5_d-1.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem20",
     DN: "DN40",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 1 1/2"-2',
     price: "603.54",
+    image: "shtu-180-1_5_d-2.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem21",
     DN: "DN40",
     material: "AISI304",
     name: "Штуцер резьбовой 90° DN40 AISI304 DIN11850",
     price: "893.81",
+    image: "shtu-90-DN40- DIN11850.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem22",
     DN: "DN40",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN40 DIN11850-1",
     price: "696.46",
+    image: "shtu-pryam-AISI304-DN40-DIN11850-1.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem23",
     DN: "DN40",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN40 DIN11850-2",
     price: "830.97",
+    image: "shtu-pryam-AISI304-DN40-DIN11850-2.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem24",
     DN: "DN40",
     material: "EPDM(p)",
     name: "Уплотнительное кольцо DN40 DIN11851 EPDM(p)",
@@ -3974,6 +4017,7 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem25",
     DN: "DN40",
     material: "NBR(p)",
     name: "Уплотнительное кольцо DN40 DIN11851 NBR(p)",
@@ -3981,6 +4025,7 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem26",
     DN: "DN50",
     material: "EPDM(p)",
     name: "Вставка резиновая DN50x25-1 EPDM(p)",
@@ -3988,6 +4033,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem27",
     DN: "DN50",
     material: "NBR(p)",
     name: "Вставка резиновая DN50x25-1 NBR(p)",
@@ -3995,27 +4041,34 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem28",
     DN: "DN50",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 2"-1',
     price: "546.02",
+    image: "shtu-180-2_d-1.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem29",
     DN: "DN50",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN50 DIN11850-1",
     price: "773.45",
+    image: "shtu-pryam-AISI304-DN50-DIN11850-1.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem30",
     DN: "DN50",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN50 DIN11850-3",
     price: "880.53",
+    image: "shtu-pryam-AISI304-DN50-DIN11850-3.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem31",
     DN: "DN50",
     material: "EPDM(p)",
     name: "Вставка резиновая DN50x25-2 EPDM(p)",
@@ -4023,6 +4076,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem32",
     DN: "DN50",
     material: "NBR(p)",
     name: "Вставка резиновая DN50x25-2 NBR(p)",
@@ -4030,6 +4084,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem33",
     DN: "DN50",
     material: "EPDM(p)",
     name: "Вставка резиновая DN50x30-1 EPDM(p)",
@@ -4037,6 +4092,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem34",
     DN: "DN50",
     material: "NBR(p)",
     name: "Вставка резиновая DN50x30-1 NBR(p)",
@@ -4044,6 +4100,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem35",
     DN: "DN50",
     material: "EPDM(p)",
     name: "Вставка резиновая DN50x30-2 EPDM(p)",
@@ -4051,6 +4108,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem36",
     DN: "DN50",
     material: "NBR(p)",
     name: "Вставка резиновая DN50x30-2 NBR(p)",
@@ -4058,27 +4116,34 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem37",
     DN: "DN50",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 2"-2',
     price: "680.53",
+    image: "shtu-180-2_d-2.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem38",
     DN: "DN50",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN50 DIN11850-2",
     price: "907.96",
+    image: "shtu-pryam-AISI304-DN50-DIN11850-2.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem39",
     DN: "DN50",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN50 DIN11850-4",
     price: "1107.08",
+    image: "shtu-pryam-AISI304-DN50-DIN11850-4.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem40",
     DN: "DN50",
     material: "AISI304",
     name: "Вставка металлическая ТИ13 DN50x25-1 AISI304",
@@ -4086,6 +4151,7 @@ export const portsItems = [
     type: "vstavka-metallicheskaya",
   },
   {
+    id: "portelem41",
     DN: "DN50",
     material: "AISI304",
     name: "Вставка металлическая ТИ13 DN50x25-2 AISI304",
@@ -4093,6 +4159,7 @@ export const portsItems = [
     type: "vstavka-metallicheskaya",
   },
   {
+    id: "portelem42",
     DN: "DN50",
     material: "EPDM(p)",
     name: "Уплотнительное кольцо DN50 DIN11851 EPDM(p)",
@@ -4100,6 +4167,7 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem43",
     DN: "DN50",
     material: "NBR(p)",
     name: "Уплотнительное кольцо DN50 DIN11851 NBR(p)",
@@ -4107,6 +4175,7 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem44",
     DN: "DN65",
     material: "EPDM(p)",
     name: "Вставка резиновая DN65x25-1 EPDM(p)",
@@ -4114,6 +4183,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem45",
     DN: "DN65",
     material: "NBR(p)",
     name: "Вставка резиновая DN65x25-1 NBR(p)",
@@ -4121,27 +4191,34 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem46",
     DN: "DN65",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 2 1/2"-1',
     price: "590.27",
+    image: "shtu-180-2_5_d-1.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem47",
     DN: "DN65",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN65 DIN11850-1",
     price: "1039.82",
+    image: "shtu-pryam-AISI304-DN65-DIN11850-1.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem48",
     DN: "DN65",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN65 DIN11850-3",
     price: "1152.21",
+    image: "shtu-pryam-AISI304-DN65-DIN11850-3.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem49",
     DN: "DN65",
     material: "EPDM(p)",
     name: "Вставка резиновая DN65x25-2 EPDM(p)",
@@ -4149,6 +4226,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem50",
     DN: "DN65",
     material: "NBR(p)",
     name: "Вставка резиновая DN65x25-2 NBR(p)",
@@ -4156,6 +4234,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem51",
     DN: "DN65",
     material: "EPDM(p)",
     name: "Вставка резиновая DN65x30-1 EPDM(p)",
@@ -4163,6 +4242,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem52",
     DN: "DN65",
     material: "NBR(p)",
     name: "Вставка резиновая DN65x30-1 NBR(p)",
@@ -4170,6 +4250,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem53",
     DN: "DN65",
     material: "EPDM(p)",
     name: "Вставка резиновая DN65x30-2 EPDM(p)",
@@ -4177,6 +4258,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem54",
     DN: "DN65",
     material: "NBR(p)",
     name: "Вставка резиновая DN65x30-2 NBR(p)",
@@ -4184,27 +4266,34 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem55",
     DN: "DN65",
     material: "AISI304",
     name: 'Штуцер резьбовой прямой AISI304 2 1/2"-2',
     price: "724.78",
+    image: "shtu-180-2_5_d-2.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem56",
     DN: "DN65",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN65 DIN11850-2",
     price: "1174.34",
+    image: "shtu-pryam-AISI304-DN65-DIN11850-2.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem57",
     DN: "DN65",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN65 DIN11850-4",
     price: "1378.76",
+    image: "shtu-pryam-AISI304-DN65-DIN11850-4.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem58",
     DN: "DN65",
     material: "AISI304",
     name: "Вставка металлическая ТИ13 DN65x25-1 AISI304",
@@ -4212,6 +4301,7 @@ export const portsItems = [
     type: "vstavka-metallicheskaya",
   },
   {
+    id: "portelem59",
     DN: "DN65",
     material: "AISI304",
     name: "Вставка металлическая ТИ13 DN65x25-2 AISI304",
@@ -4219,6 +4309,7 @@ export const portsItems = [
     type: "vstavka-metallicheskaya",
   },
   {
+    id: "portelem60",
     DN: "DN65",
     material: "EPDM(p)",
     name: "Уплотнительное кольцо DN65 DIN11851 EPDM(p)",
@@ -4226,6 +4317,7 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem61",
     DN: "DN65",
     material: "NBR(p)",
     name: "Уплотнительное кольцо DN65 DIN11851 NBR(p)",
@@ -4233,6 +4325,7 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem62",
     DN: "DN80",
     material: "EPDM(p)",
     name: "Вставка резиновая ТИ DN80x30-1 EPDM(p)",
@@ -4240,6 +4333,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem63",
     DN: "DN80",
     material: "NBR(p)",
     name: "Вставка резиновая ТИ DN80x30-1 NBR(p)",
@@ -4247,34 +4341,43 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem64",
     DN: "DN80",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN80 DIN11850-1",
     price: "1404.42",
+    image: "shtu-pryam-AISI304-DN80-DIN11850-1.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem65",
     DN: "DN80",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN80 DIN11850-3",
     price: "2056.6",
+    image: "shtu-pryam-AISI304-DN80-DIN11850-3.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem66",
     DN: "DN80",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN80 DIN11850-2",
     price: "1630.97",
+    image: "shtu-pryam-AISI304-DN80-DIN11850-2.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem67",
     DN: "DN80",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN80 DIN11850-4",
     price: "2277.6",
+    image: "shtu-pryam-AISI304-DN80-DIN11850-4.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem68",
     DN: "DN80",
     material: "EPDM(p)",
     name: "Вставка резиновая NT DN80x25-1 EPDM(p)",
@@ -4282,6 +4385,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem69",
     DN: "DN80",
     material: "NBR(p)",
     name: "Вставка резиновая NT DN80x25-1 NBR(p)",
@@ -4289,6 +4393,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem70",
     DN: "DN80",
     material: "EPDM(p)",
     name: "Вставка резиновая NT DN80x40-1 EPDM(p)",
@@ -4296,6 +4401,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem71",
     DN: "DN80",
     material: "NBR(p)",
     name: "Вставка резиновая NT DN80x40-1 NBR(p)",
@@ -4303,6 +4409,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem72",
     DN: "DN80",
     material: "EPDM(p)",
     name: "Уплотнительное кольцо DN80 DIN11851 EPDM(p)",
@@ -4310,6 +4417,7 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem73",
     DN: "DN80",
     material: "NBR(p)",
     name: "Уплотнительное кольцо DN80 DIN11851 NBR(p)",
@@ -4317,6 +4425,7 @@ export const portsItems = [
     type: "uplotnitelnoe-kolco",
   },
   {
+    id: "portelem74",
     DN: "DN100",
     material: "EPDM(p)",
     name: "Вставка резиновая ТИ DN105x40-1 EPDM(p)",
@@ -4324,6 +4433,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem75",
     DN: "DN100",
     material: "NBR(p)",
     name: "Вставка резиновая ТИ DN105x40-1 NBR(p)",
@@ -4331,6 +4441,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem76",
     DN: "DN100",
     material: "EPDM(p)",
     name: "Вставка резиновая ТИ DN105x30-1 EPDM(p)",
@@ -4338,6 +4449,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem77",
     DN: "DN100",
     material: "NBR(p)",
     name: "Вставка резиновая ТИ DN105x30-1 NBR(p)",
@@ -4345,6 +4457,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem78",
     DN: "DN100",
     material: "EPDM(p)",
     name: "Вставка резиновая ТИ DN100x40-1 EPDM(p)",
@@ -4352,6 +4465,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem79",
     DN: "DN100",
     material: "NBR(p)",
     name: "Вставка резиновая ТИ DN100x40-1 NBR(p)",
@@ -4359,6 +4473,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem80",
     DN: "DN100",
     material: "EPDM(p)",
     name: "Вставка резиновая ТИ DN100x50-1 EPDM(p)",
@@ -4366,6 +4481,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem81",
     DN: "DN100",
     material: "NBR(p)",
     name: "Вставка резиновая ТИ DN100x50-1 NBR(p)",
@@ -4373,20 +4489,25 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem82",
     DN: "DN100",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN100 DIN11850-1",
     price: "2920.45",
+    image: "shtu-pryam-AISI304-DN100-DIN11850-1.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem83",
     DN: "DN100",
     material: "AISI304",
     name: "Штуцер резьбовой прямой AISI304 DN100 DIN11850-2",
     price: "3250.00",
+    image: "shtu-pryam-AISI304-DN100-DIN11850-2.png",
     type: "shtucer-rezbovoy",
   },
   {
+    id: "portelem84",
     DN: "DN100",
     material: "EPDM(p)",
     name: "Вставка резиновая NT DN100x30 EPDM(p)",
@@ -4394,6 +4515,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem85",
     DN: "DN100",
     material: "NBR(p)",
     name: "Вставка резиновая NT DN100x30 NBR(p)",
@@ -4401,6 +4523,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem86",
     DN: "DN100",
     material: "EPDM(p)",
     name: "Вставка резиновая NT DN100x40 EPDM(p)",
@@ -4408,6 +4531,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem87",
     DN: "DN100",
     material: "NBR(p)",
     name: "Вставка резиновая NT DN100x40 NBR(p)",
@@ -4415,6 +4539,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem88",
     DN: "DN100",
     material: "EPDM(p)",
     name: "Вставка резиновая NT DN100x30-1 EPDM(p)",
@@ -4422,6 +4547,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem89",
     DN: "DN100",
     material: "NBR(p)",
     name: "Вставка резиновая NT DN100x30-1 NBR(p)",
@@ -4429,6 +4555,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem90",
     DN: "DN100",
     material: "EPDM(p)",
     name: "Вставка резиновая NT DN100x40-1 EPDM(p)",
@@ -4436,6 +4563,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem91",
     DN: "DN100",
     material: "NBR(p)",
     name: "Вставка резиновая NT DN100x40-1 NBR(p)",
@@ -4443,6 +4571,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem92",
     DN: "DN100",
     material: "EPDM(p)",
     name: "Вставка резиновая NT DN100CDH EPDM(p)",
@@ -4450,6 +4579,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem93",
     DN: "DN100",
     material: "NBR(p)",
     name: "Вставка резиновая NT DN100CDH NBR(p)",
@@ -4457,6 +4587,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem94",
     DN: "DN100",
     material: "EPDM(p)",
     name: "Вставка резиновая NT DN100CDL EPDM(p)",
@@ -4464,6 +4595,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem95",
     DN: "DN100",
     material: "NBR(p)",
     name: "Вставка резиновая NT DN100CDL NBR(p)",
@@ -4471,6 +4603,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem96",
     DN: "DN125",
     material: "EPDM(p)",
     name: "Вставка резиновая ТИ DN125x40-1 EPDM(p)",
@@ -4478,6 +4611,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem97",
     DN: "DN125",
     material: "NBR(p)",
     name: "Вставка резиновая ТИ DN125x40-1 NBR(p)",
@@ -4485,6 +4619,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem98",
     DN: "DN125",
     material: "EPDM(p)",
     name: "Вставка резиновая ТИ DN125x30-1 EPDM(p)",
@@ -4492,6 +4627,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem99",
     DN: "DN125",
     material: "NBR(p)",
     name: "Вставка резиновая ТИ DN125x30-1 NBR(p)",
@@ -4499,6 +4635,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem100",
     DN: "DN150",
     material: "EPDM(p)",
     name: "Вставка резиновая ТИ DN150x50-1 EPDM(p)",
@@ -4506,6 +4643,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem101",
     DN: "DN150",
     material: "NBR(p)",
     name: "Вставка резиновая ТИ DN150x50-1 NBR(p)",
@@ -4513,6 +4651,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem102",
     DN: "DN150",
     material: "EPDM(p)",
     name: "Вставка резиновая ТИ DN150x40-1 EPDM(p)",
@@ -4520,6 +4659,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem103",
     DN: "DN150",
     material: "NBR(p)",
     name: "Вставка резиновая ТИ DN150x40-1 NBR(p)",
@@ -4527,6 +4667,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem104",
     DN: "DN150",
     material: "EPDM(p)",
     name: "Вставка резиновая NT DN150x50 EPDM(p)",
@@ -4534,6 +4675,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem105",
     DN: "DN150",
     material: "NBR(p)",
     name: "Вставка резиновая NT DN150x50 NBR(p)",
@@ -4541,6 +4683,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem106",
     DN: "DN150",
     material: "EPDM(p)",
     name: "Вставка резиновая NT DN150x40 EPDM(p)",
@@ -4548,6 +4691,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem107",
     DN: "DN150",
     material: "NBR(p)",
     name: "Вставка резиновая NT DN150x40 NBR(p)",
@@ -4555,6 +4699,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem108",
     DN: "DN200",
     material: "EPDM(p)",
     name: "Вставка резиновая ТИ DN200x60-1 EPDM(p)",
@@ -4562,6 +4707,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem109",
     DN: "DN200",
     material: "NBR(p)",
     name: "Вставка резиновая ТИ DN200x60-1 NBR(p)",
@@ -4569,6 +4715,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem110",
     DN: "DN200",
     material: "EPDM(p)",
     name: "Вставка резиновая VT80 DN200x60 EPDM(p)",
@@ -4576,6 +4723,7 @@ export const portsItems = [
     type: "vstavka-rezinovaya",
   },
   {
+    id: "portelem111",
     DN: "DN200",
     material: "NBR(p)",
     name: "Вставка резиновая VT80 DN200x60 NBR(p)",
