@@ -7,13 +7,19 @@ import { portsItems } from "../../utils/constants";
 
 import PortsFilter from "../../utils/PortsFilter";
 
-function Ports({selectedDu, onAddedToCart, cart}) {
+function Ports({selectedDu,selectedPto, onAddedToCart, cart}) {
     
-    const portsItemsFiltered = portsItems.filter(it => `DU${it['DN'].split('DN')[1]}` === selectedDu);
+    const portsItemsFiltered = portsItems.filter(it => `DU${it['DN'].split('DN')[1]}` === selectedDu).filter(it => it.directpto ? selectedPto === `${it.directpto}` : true);
 
     function urlImage(port) {
         if (port.type === 'vstavka-rezinovaya') {
             return 'vstavka-rezinovaya.png';
+        } 
+         if (port.type === 'uplotnitelnoe-kolco') {
+            return 'ports/uplotnitelnoe-kolco-din.png';
+        } 
+         if (port.type === 'vstavka-metallicheskaya') {
+            return 'ports/metall-vstavka.png';
         } 
         return `ports/${port.image}`;
     }
@@ -26,7 +32,7 @@ function Ports({selectedDu, onAddedToCart, cart}) {
         portsItemsFiltered.map((port, i)=> (
             <div className={`card card_cti `}>
                 <div className="card__header">
-                    <h3 className="bem__title card__title_cti">{port.name} ({port.type})</h3>
+                    <h3 className="bem__title card__title_cti">{port.name}</h3>
                 </div>
                 <div className="card__image-container">  
                     <img className="card__image" src={`http://static.tochka-izloma.ru.website.yandexcloud.net/${urlImage(port)}`} alt={port.name}/>

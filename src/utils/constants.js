@@ -1,13 +1,13 @@
 export const du = {
-  '025': [25, 32, 40],
-  '077': [25, 32, 40],
-  '13': [50, 65],
-  '18': [50, 65],
-  '165': [80],
-  '28': [65],
-  '45': [100, 125],
+  '025': [20, 25, 32, 40],
+  '077': [20, 25, 32, 40],
+  '13': [32, 40, 50, 65],
+  '18': [32, 40, 50, 65],
+  '165': [50, 65, 80],
+  '28': [80, 100, 125],
+  '45': [80, 100, 125],
   '52': [150],
-  '65': [50, 65],
+  '65': [80, 100, 125],
   '82': [150],
   '95': [200, 250],
   '116': [200, 250],
@@ -3892,6 +3892,7 @@ export const portsItems = [
     price: "384.07",
     image: "shtu-180-1_25_d-1.png",
     type: "shtucer-rezbovoy",
+    directpto: 13,
   },
   {
     id: "portelem11",
@@ -3901,6 +3902,7 @@ export const portsItems = [
     price: "519.47",
     image: "shtu-180-1_25_d-2.png",
     type: "shtucer-rezbovoy",
+    directpto: 13,
   },
   {
     id: "portelem12",
@@ -3919,6 +3921,7 @@ export const portsItems = [
     price: "643.36",
     image: "shtu-pryam-AISI304-DN32-DIN11850-1.png",
     type: "shtucer-rezbovoy",
+    directpto: 13,
   },
   {
     id: "portelem14",
@@ -3928,6 +3931,7 @@ export const portsItems = [
     price: "777.88",
     image: "shtu-pryam-AISI304-DN32-DIN11850-2.png",
     type: "shtucer-rezbovoy",
+    directpto: 13,
   },
   {
     id: "portelem15",
@@ -3971,6 +3975,7 @@ export const portsItems = [
     price: "468.14",
     image: "shtu-180-1_5_d-1.png",
     type: "shtucer-rezbovoy",
+    directpto: 13,
   },
   {
     id: "portelem20",
@@ -3980,6 +3985,7 @@ export const portsItems = [
     price: "603.54",
     image: "shtu-180-1_5_d-2.png",
     type: "shtucer-rezbovoy",
+    directpto: 13,
   },
   {
     id: "portelem21",
@@ -3987,7 +3993,7 @@ export const portsItems = [
     material: "AISI304",
     name: "Штуцер резьбовой 90° DN40 AISI304 DIN11850",
     price: "893.81",
-    image: "shtu-90-DN40- DIN11850.png",
+    image: "shtu-90-DN40-DIN11850.png",
     type: "shtucer-rezbovoy",
   },
   {
@@ -3998,6 +4004,7 @@ export const portsItems = [
     price: "696.46",
     image: "shtu-pryam-AISI304-DN40-DIN11850-1.png",
     type: "shtucer-rezbovoy",
+    directpto: 13,
   },
   {
     id: "portelem23",
@@ -4007,6 +4014,7 @@ export const portsItems = [
     price: "830.97",
     image: "shtu-pryam-AISI304-DN40-DIN11850-2.png",
     type: "shtucer-rezbovoy",
+    directpto: 13,
   },
   {
     id: "portelem24",
@@ -4066,6 +4074,7 @@ export const portsItems = [
     price: "880.53",
     image: "shtu-pryam-AISI304-DN50-DIN11850-3.png",
     type: "shtucer-rezbovoy",
+    directpto: "165",
   },
   {
     id: "portelem31",
@@ -4141,6 +4150,7 @@ export const portsItems = [
     price: "1107.08",
     image: "shtu-pryam-AISI304-DN50-DIN11850-4.png",
     type: "shtucer-rezbovoy",
+    directpto: "165",
   },
   {
     id: "portelem40",
@@ -4216,6 +4226,7 @@ export const portsItems = [
     price: "1152.21",
     image: "shtu-pryam-AISI304-DN65-DIN11850-3.png",
     type: "shtucer-rezbovoy",
+    directpto: "165",
   },
   {
     id: "portelem49",
@@ -4291,6 +4302,7 @@ export const portsItems = [
     price: "1378.76",
     image: "shtu-pryam-AISI304-DN65-DIN11850-4.png",
     type: "shtucer-rezbovoy",
+    directpto: "165",
   },
   {
     id: "portelem58",
@@ -4357,6 +4369,7 @@ export const portsItems = [
     price: "2056.6",
     image: "shtu-pryam-AISI304-DN80-DIN11850-3.png",
     type: "shtucer-rezbovoy",
+    directpto: "65",
   },
   {
     id: "portelem66",
@@ -4375,6 +4388,7 @@ export const portsItems = [
     price: "2277.6",
     image: "shtu-pryam-AISI304-DN80-DIN11850-4.png",
     type: "shtucer-rezbovoy",
+    directpto: "65",
   },
   {
     id: "portelem68",
