@@ -25,6 +25,7 @@ import { pricesWithId , plitsItems, portsItems, stbItems } from "../../utils/con
 
 
 import { sendOrder } from "../../utils/mainApi";
+import Pconstr from "../Pconstr/Pconstr";
 
 
 
@@ -32,8 +33,8 @@ function CatalogDark() {
     const user = JSON.parse(localStorage.getItem('reg'));
 
     function getAliasById(elemId){
-      return pricesWithId.concat(plitsItems).concat(portsItems).filter(item => item.id === elemId)[0]['name'];
-  }
+      return pricesWithId.concat(plitsItems).concat(portsItems).concat(stbItems).filter(item => item.id === elemId)[0]['name'];
+    }
 
     function cartListToAliases() {
       return cartList.map(item => getAliasById(item))
@@ -118,6 +119,7 @@ function CatalogDark() {
                     {value: '13', text: 'ТИ13'},
                     {value: '18', text: 'ТИ18'},
                     {value: '28', text: 'ТИ28'},
+                    {value: '165', text: 'ТИ16.5'},
                     {value: '45', text: 'ТИ45'},
                     {value: '52', text: 'ТИ52'},
                     {value: '65', text: 'ТИ65'},
@@ -152,7 +154,7 @@ function CatalogDark() {
           </div>
        
           <h3 className="catalog-section__title">Порты</h3>
-          <div style={{'position': 'sticky', top: 60, backgroundColor: '#2f2f2f'}}>
+          <div style={{'position': 'sticky', top: 60, backgroundColor: '#2f2f2f', padding: '30px 0'}}>
             <RadioGroup 
                   tags={[
                       {value: 'gost', text: 'Фланец'}, 
@@ -180,14 +182,16 @@ function CatalogDark() {
           <div class="catalog-section__grid">
             <Ports cart={cartList} selectedDu={selectedDu} selectedPto={selectedPto} onAddedToCart={handleItemAddedToCart} />
           </div>
-            
-          
+
+          <h3 className="catalog-section__title">Стяжки и балки</h3>
+          <div class="catalog-section__grid">
+            <Pconstr cart={cartList} selectedDu={selectedDu} selectedPto={selectedPto} onAddedToCart={handleItemAddedToCart} />
+          </div>
+
         </div>
 
-        <CartDesc cartList={cartList} aliases={pricesWithId.concat(plitsItems).concat(portsItems)} onDelete={handleItemAddedToCart} handleSendOrder={handleSendOrder} />
-        
+        <CartDesc cartList={cartList} aliases={pricesWithId.concat(plitsItems).concat(portsItems).concat(stbItems)} onDelete={handleItemAddedToCart} handleSendOrder={handleSendOrder} />
       </section>
-        
     );
 }
 

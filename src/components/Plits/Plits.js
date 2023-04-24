@@ -20,7 +20,7 @@ function Plits({selectedDu, selectedPto, cart, onAddedToCart}) {
         plitsItemsFiltered.map((plita, i)=> (
             <div className={`card card_cti `}>
                 <div className="card__header">
-                    <h3 className="bem__title card__title_cti">{plita.name} ({plita.type})</h3>
+                    <h3 className="bem__title card__title_cti">{plita.name}</h3>
                 </div>
                 <div className="card__image-container">  
                     <img className="card__image" src={`http://static.tochka-izloma.ru.website.yandexcloud.net/${plita.image}`} alt={plita.name}/>

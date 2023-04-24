@@ -9,8 +9,9 @@ import PortsFilter from "../../utils/PortsFilter";
 
 function Ports({selectedDu,selectedPto, onAddedToCart, cart}) {
     
-    const portsItemsFiltered = portsItems.filter(it => `DU${it['DN'].split('DN')[1]}` === selectedDu).filter(it => it.directpto ? selectedPto === `${it.directpto}` : true);
-
+    //const portsItemsFiltered = portsItems.filter(it => `DU${it['DN'].split('DN')[1]}` === selectedDu).filter(it => it.directpto ? selectedPto === `${it.directpto}` : true);
+    const portsItemsFiltered = portsItems.filter(it => `DU${it['DN'].split('DN')[1]}` === selectedDu).filter(it => it.directpto ? it.directpto.includes(selectedPto) : true);
+    
     function urlImage(port) {
         if (port.type === 'vstavka-rezinovaya') {
             return 'vstavka-rezinovaya.png';

@@ -24,6 +24,8 @@ function Card(props) {
       : `uplot-${props.pto}-${props.selectedRubberMark}-${props.uplotPosition}`
 
 
+    console.log(cardId);
+    
     function handleCartAddButtonClick() {
       //setIsCardInCart(!isCardInCart);
       //props.onAddedToCart(`${props.pto}-${props.plastPorts}-${props.plastCanals}`);
@@ -40,8 +42,7 @@ function Card(props) {
     return (
       <div className={`card card_cti `}>
         <div className="card__header">
-          <h3 className={`bem__title card__title_cti`}>{ props.cardType === 'plast' ? 'Пластина': 'Уплотнение'} ТИ{props.pto} {props.plastPorts}{props.plastCanals} </h3>
-          
+          <h3 className={`bem__title card__title_cti`}>{ props.cardType === 'plast' ? 'Пластина': 'Уплотнение'} ТИ{props.pto ==='165' ? '16.5' : props.pto} {props.plastPorts}{props.plastCanals} </h3>
           {
             props.cardType === 'plast'
               ? (<ul className={`card__linelist config-list`}>

@@ -25,7 +25,7 @@ function ButtonWithRadioGroup(props) {
                     selected={props.selected}
                     onChangeSelected={handleChangeSelection}
                     /> 
-                : <button className="radiogroup__button radiogroup__button_up" onClick={handleButtonClick}>ТИ{props.selected}</button>
+                : <button className="radiogroup__button radiogroup__button_up" onClick={handleButtonClick}>ТИ{props.selected === '165' ? '16.5' : props.selected}</button>
         }
         </div>
     );
